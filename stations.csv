@@ -1,0 +1,13 @@
+station_id,station_code,station_name,city,state
+1,NDLS,New Delhi,Delhi,Delhi
+2,BCT,Mumbai Central,Mumbai,Maharashtra
+3,HWH,Howrah Junction,Kolkata,West Bengal
+4,MAS,Chennai Central,Chennai,Tamil Nadu
+5,SBC,KSR Bengaluru,Bengaluru,Karnataka
+6,JP,Jaipur Junction,Jaipur,Rajasthan
+7,CNB,Kanpur Central,Kanpur,Uttar Pradesh
+8,BPL,Bhopal Junction,Bhopal,Madhya Pradesh
+9,NGP,Nagpur Junction,Nagpur,Maharashtra
+10,ADI,Ahmedabad Junction,Ahmedabad,Gujarat
+11,PNBE,Patna Junction,Patna,Bihar
+12,LKO,Lucknow Charbagh,Lucknow,Uttar Pradesh
