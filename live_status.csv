@@ -1,0 +1,7 @@
+live_id,train_id,journey_date,current_status,delay_minutes,expected_platform,last_updated
+1,1,2026-07-10,On Time,0,5,2026-07-10 15:40
+2,2,2026-07-10,Delayed,20,9,2026-07-10 15:41
+3,3,2026-07-10,Delayed,45,12,2026-07-10 15:39
+4,7,2026-07-10,On Time,0,1,2026-07-10 15:42
+5,9,2026-07-10,Platform Change,0,3,2026-07-10 15:38
+6,10,2026-07-10,Departed,5,2,2026-07-10 06:15
