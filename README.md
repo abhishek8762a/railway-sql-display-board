@@ -31,7 +31,7 @@ keeps its own copy of the data.
 
 - `schema.sql` — run this first, it builds the database + tables + data (MySQL)
 - `queries.sql` — the display board query and the "update one row" demo
-- `data/` — the raw data as CSV files if you want to import it somewhere else
+-  the raw data as CSV files if you want to import it somewhere else
 
 ## How to run
 
