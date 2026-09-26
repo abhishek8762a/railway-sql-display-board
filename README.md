@@ -63,7 +63,7 @@ as each station phoned in where the trains were. That chart was the single
 source of truth back then.
 
 Funny thing — the idea never really changed. Only who does the updating. A
-station master became a GPS. A paper chart became a table.
+station master became a GPS. A paper chart became a table. The core idea — one source of truth — is what powers modern operational dashboards too.
 
 ---
 
