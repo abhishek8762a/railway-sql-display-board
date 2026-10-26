@@ -1,19 +1,19 @@
 -- ============================================================
 --  RAILWAY DISPLAY-BOARD SYSTEM  --  MySQL (with foreign keys)
---  Poori file ek baar mein run karo.
+--  Run the whole file once. It builds the database, tables and data.
 -- ============================================================
 
 CREATE DATABASE IF NOT EXISTS railway_system;
 USE railway_system;
 
--- purani tables hata do (ulte order mein - child pehle)
+-- drop old tables (reverse order: child tables first)
 DROP TABLE IF EXISTS platform_status;
 DROP TABLE IF EXISTS live_status;
 DROP TABLE IF EXISTS train_schedule;
 DROP TABLE IF EXISTS train_master;
 DROP TABLE IF EXISTS stations;
 
--- 1) STATIONS  (sabse pehle - ye kisi ko point nahi karti)
+-- 1) STATIONS  (created first, it does not reference any table)
 CREATE TABLE stations (
     station_id    INT PRIMARY KEY,
     station_code  VARCHAR(10) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE stations (
     state         VARCHAR(50)
 );
 
--- 2) TRAIN_MASTER  (stations ko point karti hai)
+-- 2) TRAIN_MASTER  (references stations)
 CREATE TABLE train_master (
     train_id          INT PRIMARY KEY,
     train_number      VARCHAR(10) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE train_master (
     FOREIGN KEY (dest_station_id)   REFERENCES stations(station_id)
 );
 
--- 3) TRAIN_SCHEDULE  (train_master + stations dono ko point karti hai)
+-- 3) TRAIN_SCHEDULE  (references both train_master and stations)
 CREATE TABLE train_schedule (
     schedule_id    INT PRIMARY KEY,
     train_id       INT,
@@ -72,7 +72,7 @@ CREATE TABLE platform_status (
 );
 
 -- ============================================================
---  DATA  (isi order mein daalo - parent pehle, child baad me)
+--  DATA  (insert in this order: parent tables first, then child tables)
 -- ============================================================
 
 INSERT INTO stations VALUES
